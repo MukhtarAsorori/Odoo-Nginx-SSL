@@ -20,7 +20,7 @@ It uses fewer resources and delivers static content more quickly.
 # Prerequisites
 Make sure that you have met the following prerequisites before continuing with this tutorial:
 
-You have Odoo installed, if not you can find the instructions [here](https://github.com/Yenthe666/InstallScript/tree/16.0)
-You have a domain name pointing to your Odoo installation.
+- You have Odoo installed, if not you can find the instructions [here](https://github.com/Yenthe666/InstallScript/tree/16.0)
+- You have a domain name pointing to your Odoo installation.
 
 
