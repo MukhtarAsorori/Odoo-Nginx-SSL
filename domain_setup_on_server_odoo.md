@@ -1,18 +1,18 @@
-Nginx setup in Odoo
-# Step 1: Install Nginx
+# Nginx setup in Odoo
+## Step 1: Install Nginx
 sudo apt update
 sudo apt upgrade
 sudo apt install nginx
-# Step 2: Remove default Nginx configurations
+## Step 2: Remove default Nginx configurations
 ```
 sudo rm /etc/nginx/sites-enabled/default
 sudo rm /etc/nginx/sites-available/default
 ```
-# Step 3: Create a new Nginx configuration for Odoo in the sites-available directory.
+## Step 3: Create a new Nginx configuration for Odoo in the sites-available directory.
 ```
 sudo nano /etc/nginx/sites-available/odoo.conf
 ```
-# Step 4: Copy and paste the following configuration, ensure that you change the server_name directory to match your domain name.
+## Step 4: Copy and paste the following configuration, ensure that you change the server_name directory to match your domain name.
 
 ```
 upstream odoo8069 {
@@ -52,13 +52,13 @@ server {
 
  Hit Ctrl+X followed by Y and Enter to save the file and exit.
 
- # Step 5: To enable this newly created website configuration, symlink the file that you just created into the sites-enabled directory.
+## Step 5: To enable this newly created website configuration, symlink the file that you just created into the sites-enabled directory.
 
  ```
  sudo ln -s /etc/nginx/sites-available/odoo15.conf /etc/nginx/sites-enabled/odoo15.conf
  ```
 
- # Step 6: Check your configuration and restart Nginx for the changes to take effect.
+## Step 6: Check your configuration and restart Nginx for the changes to take effect.
 
  ```
  sudo nginx -t
