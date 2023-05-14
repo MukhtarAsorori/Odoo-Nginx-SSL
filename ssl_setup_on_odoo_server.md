@@ -1,32 +1,31 @@
 # Install SSL on Odoo Server
 
 ## Install and configure SSL for Odoo
-
---
+```
 sudo apt install python3-certbot-nginx -y
---
+```
 
 ## Run this command to receive certificates
 
---
+```
 sudo certbot --nginx certonly
---
+```
 
 ###  Enter any email and agee to the terms and conditions. The Certbot client will automatically generate the new certificate for your domain. Now we need to update the Nginx config.
 
---
+```
 sudo rm  /etc/nginx/sites-enabled/odoo.conf
 sudo rm  /etc/nginx/sites-available/odoo.conf
---
+```
 
---
+```
 sudo nano /etc/nginx/sites-available/odoo.conf
---
+```
 
 ## Redirect HTTP Traffic to HTTPS
 ### Open your site’s Nginx configuration file add replace everything with the following.
 
---
+```
 upstream odoo8069 {
      server 45.33.112.22:8069;
  }
@@ -86,18 +85,18 @@ upstream odoo8069 {
      gzip_types text/css text/less text/plain text/xml application/xml application/json application/javascript;
      gzip on;
  }
---
+```
 Hit CTRL+X followed by Y to save the changes.
 ###  Run the following command to symlink the file you just created with
---
+```
 /etc/nginx/sites-enabled/ directory
 sudo ln -s /etc/nginx/sites-available/odoo.conf /etc/nginx/sites-enabled/odoo.conf
---
+```
 
 ### Check your configuration and restart Nginx for the changes to take effect.
---
+```
 sudo nginx -t
 sudo service nginx restart
---
+```
 
 That's it.
