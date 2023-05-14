@@ -1,14 +1,17 @@
 # Install SSL on Odoo Server
 
 ## Install and configure SSL for Odoo
+
 --
 sudo apt install python3-certbot-nginx -y
 --
 
 ## Run this command to receive certificates
+
 --
 sudo certbot --nginx certonly
 --
+
 ###  Enter any email and agee to the terms and conditions. The Certbot client will automatically generate the new certificate for your domain. Now we need to update the Nginx config.
 
 --
