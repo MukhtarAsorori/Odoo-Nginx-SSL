@@ -1,8 +1,12 @@
 # Nginx setup in Odoo
 ## Step 1: Install Nginx
+
+```
 sudo apt update
 sudo apt upgrade
 sudo apt install nginx
+```
+
 ## Step 2: Remove default Nginx configurations
 ```
 sudo rm /etc/nginx/sites-enabled/default
