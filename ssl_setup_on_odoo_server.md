@@ -1,6 +1,7 @@
 # Install SSL on Odoo Server
 
 ## Install and configure SSL for Odoo
+
 ```
 sudo apt install python3-certbot-nginx -y
 ```
