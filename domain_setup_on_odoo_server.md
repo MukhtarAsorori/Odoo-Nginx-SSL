@@ -59,7 +59,7 @@ server {
 ## Step 5: To enable this newly created website configuration, symlink the file that you just created into the sites-enabled directory.
 
  ```
- sudo ln -s /etc/nginx/sites-available/odoo15.conf /etc/nginx/sites-enabled/odoo15.conf
+ sudo ln -s /etc/nginx/sites-available/odoo.conf /etc/nginx/sites-enabled/odoo.conf
  ```
 
 ## Step 6: Check your configuration and restart Nginx for the changes to take effect.
