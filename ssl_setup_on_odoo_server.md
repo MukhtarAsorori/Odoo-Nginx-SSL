@@ -28,38 +28,38 @@ sudo nano /etc/nginx/sites-available/odoo.conf
 
 ```
 upstream odoo8069 {
-     server 45.33.112.22:8069;
+     server 127.0.0.1:8069;
  }
 
  server {
      listen [::]:80;
      listen 80;
 
-     server_name hhc-test.my-care.io www.hhc-test.my-care.io;
+     server_name your-domain.com www.your-domain.com;
 
-     return 301 https://hhc-test.my-care.io$request_uri;
+     return 301 https://your-domain.com$request_uri;
  }
 
  server {
      listen [::]:443 ssl;
      listen 443 ssl;
 
-     server_name www.hhc-test.my-care.io;
+     server_name www.your-domain.com;
 
-     ssl_certificate /etc/letsencrypt/live/hhc-test.my-care.io/fullchain.pem;
-     ssl_certificate_key /etc/letsencrypt/live/hhc-test.my-care.io/privkey.pem;
+     ssl_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem;
+     ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
 
-     return 301 https://hhc-test.my-care.io$request_uri;
+     return 301 https://your-domain.com$request_uri;
  }
 
  server {
      listen [::]:443 ssl http2;
      listen 443 ssl http2;
 
-     server_name hhc-test.my-care.io;
+     server_name your-domain.com;
 
-     ssl_certificate /etc/letsencrypt/live/hhc-test.my-care.io/fullchain.pem;
-     ssl_certificate_key /etc/letsencrypt/live/hhc-test.my-care.io/privkey.pem;
+     ssl_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem;
+     ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
 
      access_log /var/log/nginx/odoo_access.log;
      error_log /var/log/nginx/odoo_error.log;
