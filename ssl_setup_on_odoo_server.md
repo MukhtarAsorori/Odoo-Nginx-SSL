@@ -90,7 +90,6 @@ upstream odoo8069 {
 Hit CTRL+X followed by Y to save the changes.
 ###  Run the following command to symlink the file you just created with
 ```
-/etc/nginx/sites-enabled/ directory
 sudo ln -s /etc/nginx/sites-available/odoo.conf /etc/nginx/sites-enabled/odoo.conf
 ```
 
