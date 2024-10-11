@@ -16,6 +16,8 @@ sudo certbot --nginx certonly
 
 ```
 sudo rm  /etc/nginx/sites-enabled/odoo.conf
+```
+```
 sudo rm  /etc/nginx/sites-available/odoo.conf
 ```
 
@@ -96,6 +98,8 @@ sudo ln -s /etc/nginx/sites-available/odoo.conf /etc/nginx/sites-enabled/odoo.co
 ### Check your configuration and restart Nginx for the changes to take effect.
 ```
 sudo nginx -t
+```
+```
 sudo service nginx restart
 ```
 
