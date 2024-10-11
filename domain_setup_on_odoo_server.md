@@ -70,9 +70,9 @@ server {
 
 ## Step 6: Check your configuration and restart Nginx for the changes to take effect.
 
- ```
+```
  sudo nginx -t
 ```
 ```
- sudo service nginx restart
- ```
+sudo service nginx restart
+```
