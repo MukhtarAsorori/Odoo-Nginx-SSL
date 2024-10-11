@@ -3,13 +3,19 @@
 
 ```
 sudo apt update
+```
+```
 sudo apt upgrade
+```
+```
 sudo apt install nginx
 ```
 
 ## Step 2: Remove default Nginx configurations
 ```
 sudo rm /etc/nginx/sites-enabled/default
+```
+```
 sudo rm /etc/nginx/sites-available/default
 ```
 ## Step 3: Create a new Nginx configuration for Odoo in the sites-available directory.
@@ -66,5 +72,7 @@ server {
 
  ```
  sudo nginx -t
+```
+```
  sudo service nginx restart
  ```
