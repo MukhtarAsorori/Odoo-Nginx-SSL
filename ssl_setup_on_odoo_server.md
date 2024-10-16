@@ -73,7 +73,7 @@ upstream odoo8069 {
      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
      proxy_set_header X-Forwarded-Proto $scheme;
      proxy_set_header X-Real-IP $remote_addr;
-     client_max_body_size 100M;
+     client_max_body_size 800M;
 
      location / {
         proxy_pass http://odoo8069;
